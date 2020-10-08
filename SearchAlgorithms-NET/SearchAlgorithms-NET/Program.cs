@@ -14,13 +14,25 @@ namespace SearchAlgorithms_NET
             int[] array = new int[] { 5, 10, 1, 7, 4, 9, 8, 6, 2, 3, 5 };
             PrintArray(array);
 
-            int linearSearchElement = 8;
-            Console.Write($"Linear Search: {linearSearchElement};\t");
-            PrintResult(array, LinearSearch<int>.Search(array, linearSearchElement));
+            int element = 8;
+            Console.Write($"Linear Search: {element};\t");
+            PrintResult(array, LinearSearch<int>.Search(array, element));
 
-            int linearSearchElement2 = 13;
-            Console.Write($"Linear Search: {linearSearchElement2};\t");
-            PrintResult(array, LinearSearch<int>.Search(array, linearSearchElement2));
+            element = 13;
+            Console.Write($"Linear Search: {element};\t");
+            PrintResult(array, LinearSearch<int>.Search(array, element));
+
+            Console.Write("\nSort: ");
+            Array.Sort(array);
+            PrintArray(array);
+
+            element = 8;
+            Console.Write($"Binary Search: {element};\t");
+            PrintResult(array, BinarySearch<int>.Search(array, element));
+
+            element = 13;
+            Console.Write($"Binary Search: {element};\t");
+            PrintResult(array, BinarySearch<int>.Search(array, element));
 
             Console.ReadLine();
         }
